@@ -1,0 +1,115 @@
+@import './variables.scss';
+
+@keyframes liftOff {
+    0% { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(64px);
+        opacity: 0;
+    }
+}
+
+@keyframes floating {
+    0% { 
+        transform: translateY(0px);
+    }
+    45% {
+        transform: translateY(5px) rotate(4deg);
+    }
+    55% {
+        transform: translateY(5px) rotate(-4deg);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.00);
+    }
+    25% {
+        transform: scale(1.25);
+    }
+    50% {
+        transform: scale(1.10);
+    }
+    75% {
+        transform: scale(1.20);
+    }
+    100% {
+        transform: scale(1.20);
+    }
+}
+
+@keyframes stars {
+    0% { 
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        top: 150%;
+        opacity: 0;
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes planet {
+    0% { 
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(800%);
+    }
+}
+@keyframes asteroids {
+    0% { 
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(1000%);
+    }
+}
+@keyframes rotate {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: $glow;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    50% {
+        box-shadow: $glow;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    52% {
+        box-shadow: $flicker;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    53% {
+        box-shadow: $glow;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    60% {
+        box-shadow: $flicker;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    62% {
+        box-shadow: $glow;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+    100% {
+        box-shadow: $glow;
+        text-shadow: 0 0 5px #fff, 0 0 10px $primary-accent, 0 0 20px $blue-bg;
+    }
+}
