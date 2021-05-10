@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import './variables.scss';
+
+
+/* -------------- GLOBAL STYLES ------------------ */
+html {
+    overflow-x: hidden;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: auto;
+    background: $light-bg;
+}
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: 'Baloo Tamma 2';
+}
+h1 {
+    margin: 8px 0;
+}
+main {
+    box-sizing: border-box;
+}
+h2 {
+    margin: 8px 0;
+}
+p {
+    margin: 4px 0;
+}
