@@ -1,5 +1,7 @@
+import ButtonPrimary from '../components/buttons/button-primary'
+import ButtonSecondary from '../components/buttons/button-secondary'
 import Head from 'next/head'
-import Sidebar from '../components/navbars/sidebar';
+import Sidebar from '../components/navbars/sidebar'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -14,7 +16,9 @@ export default function Home() {
       <main className={styles.dashboard}>
         <Sidebar />
         <div className={styles.content}>
-
+          <h1>Welcome to the Charter Intranet</h1>
+          <ButtonPrimary link='/' content='Read more' />
+          <ButtonSecondary link='/' content='Read more' />
         </div>
       </main>
 

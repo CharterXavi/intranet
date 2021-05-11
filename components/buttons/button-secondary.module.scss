@@ -1,0 +1,30 @@
+@import '../../styles/mixins.scss';
+
+/* ----------------------- STYLES --------------------------- */
+.ButtonSecondary {
+    @extend %btn-styles;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 110%;
+        height: 100%;
+        background: $light-clinic-blue;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        z-index: -2;
+        transition: 0.3s ease all;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    &:hover::before {
+        left: -5%;
+    }
+    &:hover {
+        box-shadow: none;
+        transform: translateY(2px);
+        transition: 0.3s ease all;
+        cursor: pointer;
+    }
+}
