@@ -1,14 +1,22 @@
 /* ---- COLORS ---- */
-$primary-accent: #56CCF2;
-$flame: linear-gradient(90deg, #EB5757 0%, #FF00A8 51.56%, #FF9900 94.79%);
-$space: linear-gradient(180deg, #034866 0%, #3C239A 23.96%, #5712B2 43.23%, #720FBF 59.9%, #617DE3 86.98%, #5E94E7 90.62%, #56CCF2 100%);
-$space2: linear-gradient(180deg, #000E22 28.65%, #008189 99.99%, #00FFF0 100%);
-$space3: linear-gradient(180deg, #071D3F 54.69%, #0071A2 86.98%, #0092D1 99.99%, #00B2FF 100%);
-$space4: linear-gradient(180deg, #071D3F 48.44%, #003A53 100%);
-$dark-bg: #010E1D;
-$dark-blue-bg: #071D3F;
-$blue-bg: #034866;
-$light-bg: #FFFFFF;
+$primary-accent: #F22C57;
+$pink-sherbet: #F493AA;
+$light-accent: #f2d1c9;
+$heading-color: #282e3e;
+$clinic-blue: #CED3DC;
+$light-clinic-blue: #F6F7FB;
+$maximum-blue: #0FBDBD;
+$scrubs-blue: #546182;
+$detail-grey: #535968;
+$rose: linear-gradient(180deg, #F493AA 0%, #F05F7E 100%);
+$sunset: linear-gradient(66.41deg, #F3476C 24.79%, #FFCE94 85.46%);
+$mist: linear-gradient(90deg, #F493AA 0%, #F2D1C9 100%);
+$ocean: linear-gradient(270deg, #0FBDBD -7.32%, #363F55 100%);
+$super-gradient: linear-gradient(66.41deg, #F14D70 14.26%, #FF008A 34.32%, #FF446C 53.87%, #FFB016 87.46%);
+$hero-gradient-white: linear-gradient(90deg, #FFFFFF 42.19%, #F493AA 61.98%);
+$hero-gradient-light: linear-gradient(90deg, #F6F7FB 42.19%, #F493AA 61.98%);
+$hero-gradient-dark: linear-gradient(90deg, #282e3e 42.19%, #F493AA 61.98%);
+$hero-gradient-colorful: linear-gradient(180deg, #282e3e 0%, #2C3959 47.92%, #F05F7E 100%);
 
 /* ---- SPACING ---- */
 $margin-std: 16px 32px;
@@ -21,8 +29,9 @@ $light-font: #FFFFFF;
 $dark-font: #182933;
 
 /* ---- SHADOWS ---- */
-$btn-shadow-inset: inset 0px 0px 8px 10px rgba(200, 252, 255, 0.25);
-$glow: 0px 0px 6px 2px rgba(192,243,255,0.81);
-$glow-red: 0px 0px 6px 2px rgba(255, 192, 192, 0.81);
-$flicker: 0px 0px 6px 2px rgba(101, 130, 136, 0.81);
-$rocket-glow: 0px 3px 10px 8px rgb(255, 169, 10);
+$standard-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+$button-shadow: 0px 5px 12px rgba(0, 0, 0, 0.22);
+$nav-shadow: 0px 7px 15px 0px rgba(0,0,0,0.2);
+$inset-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+$wave-shadow-top: 0px -5px 15px rgba(0, 0, 0, 0.75);
+$wave-shadow-bottom: 0px 5px 15px rgba(0, 0, 0, 0.75);
