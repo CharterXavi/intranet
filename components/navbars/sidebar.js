@@ -1,14 +1,19 @@
+import ButtonPrimary from '../buttons/button-primary'
+import Menu from '../navbars/menu'
 import styles from './sidebar.module.scss'
 
 const Sidebar = () => {
     return (
         <div className={styles.Sidebar}>
-            <ul className={styles.menu}>
-                <li>Feed</li>
-                <li>The Latest</li>
-                <li>HR</li>
-                <li>IT</li>
-            </ul>
+            <div className={styles.topMenu}>
+                <div className={styles.brand}>
+                    LOGO
+                </div>
+                <Menu />
+            </div>
+            <div className={styles.bottomMenu}>
+                <ButtonPrimary link='/' content='charterhcg.com' />
+            </div>
         </div>
     )
 }
