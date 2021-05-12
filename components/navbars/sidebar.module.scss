@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+// @import '../../styles/mixins.scss';
+
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: $right-shadow;
+    z-index: 10;
+    box-sizing: border-box;
+    
+    .topMenu {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+
+        .brand {
+            margin: 32px 0;
+        }
+    }
+
+    .bottomMenu {
+        padding: 16px 0;
+        box-sizing: border-box;
+    }
+}

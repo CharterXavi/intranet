@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200&display=swap');
 @import './variables.scss';
 
 
@@ -9,22 +9,118 @@ html {
     padding: 0 0 0 0;
     width: 100%;
     height: auto;
-    background: $light-bg;
 }
 body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    font-family: 'Baloo Tamma 2';
+    font-family: 'Nunito', sans-serif;
 }
+h1, h2, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+  }
 h1 {
-    margin: 8px 0;
-}
-main {
-    box-sizing: border-box;
+    color: $primary-accent;
+    font-size: 4.75em;
+    padding: 16px 0;
+    margin: 0 0;
+    letter-spacing: 0px;
+    font-weight: 600;
 }
 h2 {
-    margin: 8px 0;
+    font-size: 3.5em;
+    font-weight: 600;
+    padding: 16px 0;
+    margin: 0 0;
+    letter-spacing: -0.5px;
+    color: $primary-accent;
+}
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: $primary-accent;
+    font-size: 2.75em;
+    padding: 16px 0;
+    margin: 0 0;
+    letter-spacing: 0px;
+}
+h4 {
+    font-size: 2em;
+    padding: 8px 0;
+    margin: 0 0;
+    letter-spacing: 0.25px;
+    font-weight: 700;
+    color: $primary-accent;
+}
+h5 {
+    font-size: 1.5em;
+    padding: 8px 0;
+    margin: 0 0;
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: $primary-accent;
+}
+h6 {
+    font-size: 1.25em;
+    padding: 8px 0;
+    margin: 0 0;
+    letter-spacing: 0.15px;
+    font-weight: 700;
+    color: $heading-color;
 }
 p {
+    color: $detail-grey;
+    font-size: 1em;
+    width: 100%;
+    padding: 8px 0;
+    margin: 0 0;
+    font-weight: 400px;
+    letter-spacing: 0.5px;
+}
+ul {
+    padding-left: 20px;
     margin: 4px 0;
+}
+li {
+    color: $detail-grey;
+    font-size: 1em;
+    width: 100%;
+    padding: 0;
+    margin: 0 0;
+    font-weight: 400px;
+    letter-spacing: 0.5px;
+}
+a {
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: $primary-accent;
+    cursor: pointer;
+}
+hr {
+    width: 100%;
+    border: 3px solid white;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+.detail-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: auto;
+    color: $heading-color;
+    border-left: 2px solid $primary-accent;
+    padding: 0px 0px 0px 16px;
+    margin: 8px 0px 0px;
+}
+.detail-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9em;
+    color: $detail-grey;
+}
+.button-text {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1.25px;
 }

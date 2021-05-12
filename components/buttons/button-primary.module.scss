@@ -1,0 +1,32 @@
+@import '../../styles/mixins.scss';
+
+/* ----------------------- STYLES --------------------------- */
+.ButtonPrimary {
+    @extend %btn-styles;
+    color: white;
+    background: $primary-accent;
+
+    &:hover {
+        box-shadow: none;
+        transform: translateY(2px);
+        cursor: pointer;
+        color: white;
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $super-gradient;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        transition: 0.3s ease all;
+        opacity: 0;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+    &:hover::before {
+        opacity: 1;
+    }
+}
