@@ -1,4 +1,5 @@
 import ButtonPrimary from '../buttons/button-primary'
+import {CharterLogoDark} from 'unify-design-icons'
 import Menu from '../navbars/menu'
 import styles from './sidebar.module.scss'
 
@@ -7,7 +8,7 @@ const Sidebar = () => {
         <div className={styles.Sidebar}>
             <div className={styles.topMenu}>
                 <div className={styles.brand}>
-                    LOGO
+                    <CharterLogoDark className={styles.logo} />
                 </div>
                 <Menu />
             </div>
