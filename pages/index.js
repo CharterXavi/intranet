@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Sidebar from '../components/navbars/sidebar'
+import Topbar from '../components/navbars/topbar'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.dashboard}>
+        <Topbar />
         <Sidebar />
         <div className={styles.content}>
           <h1>Welcome to the Charter Intranet</h1>
