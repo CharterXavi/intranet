@@ -1,4 +1,11 @@
+@import '../../styles/variables.scss';
+
 .PostLink {
+    width: 320px;
+    height: 250px;
+}
+
+.wrapper {
     width: 100%;
     height: 100%;
     background: black;
@@ -6,7 +13,7 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
     position: relative;
     overflow: hidden;
-    transition: 0.4s ease all;
+    transition: 0.15s ease all;
     z-index: 1;
 
     &::before {
@@ -22,25 +29,22 @@
         left: -30%;
         width: 30%;
         height: 100%;
-        background: var(--heading-color);
-        box-shadow: var(--standard-shadow);
+        background: $heading-color;
+        box-shadow: $standard-shadow;
         transition: 0.25s ease all;
         z-index: 2;
     }
     &:hover::before {
         left: 0;
     }
-    &:hover img{
+    &:hover .image {
         transform: translateX(64px);
     }
     &:hover .content {
         transform: translateX(32px);
     }
 
-
-    img {
-        width: 100%;
-        min-height: 100%;
+    .image {
         position: absolute;
         top: 0;
         left: 0;
@@ -55,7 +59,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 0;
+        z-index: 1;
         transition: 0.4s ease all;
     }
     .categories {
@@ -66,7 +70,7 @@
         right: 16px;
         z-index: 5;
         color: white;
-        background: var(--super-gradient);
+        background: $super-gradient;
         border-radius: 5px;
         padding: 4px 8px;
         margin: 0 0 0 0;
