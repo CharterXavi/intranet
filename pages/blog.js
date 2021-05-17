@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
-import styles from './index.module.scss'
+import styles from './blog.module.scss'
 
 export default function Home() {
   return (
@@ -19,11 +19,11 @@ export default function Home() {
         <Topbar />
         <Sidebar />
         <div className={styles.content}>
-          <WelcomeBanner title='Welcome to Charter Intranet!' />
+          <WelcomeBanner title='The Latest' />
 
           <div className={styles.twoColumn}>
             <div className={styles.left}>
-              <CompanyResources />
+              
             </div>
             <div className={styles.right}>
               <EmployeeSpotlight />

@@ -1,0 +1,89 @@
+.PostLink {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease all;
+    z-index: 1;
+
+    &::before {
+        content: '→';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        left: -30%;
+        width: 30%;
+        height: 100%;
+        background: var(--heading-color);
+        box-shadow: var(--standard-shadow);
+        transition: 0.25s ease all;
+        z-index: 2;
+    }
+    &:hover::before {
+        left: 0;
+    }
+    &:hover img{
+        transform: translateX(64px);
+    }
+    &:hover .content {
+        transform: translateX(32px);
+    }
+
+
+    img {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+        transition: 0.25s ease all;
+    }
+    .overlay {
+        background: linear-gradient(180deg, rgba(144, 144, 144, 0) 0%, rgba(44, 44, 44, 0.519531) 63.02%, rgba(0, 0, 0, 0.75) 89.58%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transition: 0.4s ease all;
+    }
+    .categories {
+        transition: 0.4s ease all;
+        font-size: 0.8rem;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 5;
+        color: white;
+        background: var(--super-gradient);
+        border-radius: 5px;
+        padding: 4px 8px;
+        margin: 0 0 0 0;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+        transition: 0.4s ease all;
+    
+        .category {
+            padding: 0 0 0 0;
+            color: white;
+        }
+    }
+    .content {
+        transition: 0.4s ease all;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        z-index: 3;
+        color: white;
+    }
+}
