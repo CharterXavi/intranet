@@ -1,3 +1,4 @@
+import Announcements from '../components/sections/announcements'
 import CompanyResources from '../components/sections/company-resources'
 import EmployeeSpotlight from '../components/sections/employee-spotlight'
 import Head from 'next/head'
@@ -29,6 +30,7 @@ export default function Home() {
             </div>
             <div className={styles.right}>
               <EmployeeSpotlight />
+              <Announcements />
             </div>
           </div> 
         </div>
