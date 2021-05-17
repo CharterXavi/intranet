@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {motion} from 'framer-motion'
 import styles from './post-link.module.scss'
 
 //NEED TO REEVALUATE PROPS SCHEMA AND STRUCTURE COMPONENT ACCORDING TO CONTENTFUL AND NEXT
@@ -25,7 +26,16 @@ import styles from './post-link.module.scss'
 const PostLink = (props) => {
     return (
         <Link href='/'>
-            <a className={styles.PostLink}>
+            <motion.a className={styles.PostLink}
+                            initial={{ opacity: 0 }}
+                            animate={{  
+                                opacity: 1
+                            }}
+                            transition={{ 
+                                type: 'spring',
+                                duration: 0.4
+                            }}
+            >
                 <div className={styles.wrapper}>
                     <div className={styles.categories}>
                         <p className={styles.category}>
@@ -38,9 +48,9 @@ const PostLink = (props) => {
                         1/1/2021
                     </div>
                     <div className={styles.overlay}></div>
-                    <Image src='/nurses.png' alt="Blog Post" layout='fill' className={styles.image} />
+                    <Image src={`/${props.image}`} alt="Blog Post" layout='fill' className={styles.image} />
                 </div>
-            </a>
+            </motion.a>
         </Link>
     )
 };

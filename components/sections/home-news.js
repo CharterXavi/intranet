@@ -7,8 +7,8 @@ const HomeNews = () => {
         <div className={styles.HomeNews}>
             <Title content='Recent news' />
             <div className={styles.container}>
-                <PostLink />
-                <PostLink />
+                <PostLink image={'patient.png'} />
+                <PostLink image={'nurses.png'} />
             </div>
         </div>
     )
