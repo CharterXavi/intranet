@@ -3,7 +3,7 @@ import styles from './employee-spotlight.module.scss'
 
 const EmployeeSpotlight = () => {
     return (
-        <div className={styles.CompanyResources}>
+        <div className={styles.EmployeeSpotlight}>
             <Title content='Employee Spotlight' />
             <div className={styles.container}>
     

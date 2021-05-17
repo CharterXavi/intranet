@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.EmployeeSpotlight {
+.Announcements {
     width: 100%;
     margin: 0 0 16px 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
 
     .container {
         width: 100%;
-        height: 400px;
+        height: 250px;
         border-radius: 10px;
         background: white;
         box-shadow: $standard-shadow;
