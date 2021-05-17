@@ -1,12 +1,32 @@
+@import '../../styles/variables.scss';
+
 .Menu {
     list-style: none;
     padding: 0;
-
-    ul {
-        width: 100%;
+    width: 100%;
         
-        li {
+    li {
+        width: 100%;
+        height: 50px;
+
+        a {
+            display: flex;
             width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            color: $detail-grey;
+            transition: 0.15s ease all;
+
+            &:hover {
+                color: $primary-accent;
+            }
         }
     }
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 8px 0 0;
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
+import WelcomeBanner from '../components/banners/welcome-banner'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -16,7 +17,16 @@ export default function Home() {
         <Topbar />
         <Sidebar />
         <div className={styles.content}>
-          <h1>Welcome to the Charter Intranet</h1>
+          <WelcomeBanner />
+
+          <div className={styles.twoColumn}>
+            <div className={styles.left}>
+
+            </div>
+            <div className={styles.right}>
+              
+            </div>
+          </div> 
         </div>
       </main>
     </div>
