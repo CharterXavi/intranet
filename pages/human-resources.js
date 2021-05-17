@@ -1,11 +1,11 @@
-import Announcements from '../components/sections/announcements'
+import EmployeeSpotlight from '../components/sections/employee-spotlight'
 import Head from 'next/head'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
-import styles from './blog.module.scss'
+import styles from './human-resources.module.scss'
 
-export default function BlogPage() {
+export default function HRPage() {
   return (
     <div>
       <Head>
@@ -18,14 +18,14 @@ export default function BlogPage() {
         <Topbar />
         <Sidebar />
         <div className={styles.content}>
-          <WelcomeBanner title='The Latest' />
+          <WelcomeBanner title='Human Resources Center' />
 
           <div className={styles.twoColumn}>
             <div className={styles.left}>
               
             </div>
             <div className={styles.right}>
-              <Announcements />
+              <EmployeeSpotlight />
             </div>
           </div> 
         </div>
