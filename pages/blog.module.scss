@@ -1,0 +1,38 @@
+@import '../styles/variables.scss';
+
+.dashboard {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc(16px + 64px) 16px 32px 216px;
+    box-sizing: border-box;
+    background: $light-clinic-blue;
+
+    .content {
+        width: 100%;
+        box-sizing: border-box;
+    
+
+        .twoColumn {
+            width: 100%;
+            display: flex;
+            margin: 16px 0;
+
+            .left {
+                width: 75%;
+                height: 1000px;
+                border: 1px dashed $clinic-blue;
+                border-radius: 10px;
+                margin: 0 16px 0 0;
+            }
+        
+            .right {
+                width: 25%;
+                height: 1000px;
+                border: 1px dashed $clinic-blue;
+                border-radius: 10px;
+            }
+        }
+    }
+}

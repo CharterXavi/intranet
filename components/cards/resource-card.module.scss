@@ -14,12 +14,6 @@
     margin-bottom: 16px;
     position: relative;
     overflow: hidden;
-    transition: 0.15s ease all;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: $button-shadow;
-    }
 
     &:nth-of-type(2) {
         margin-left: 16px;
