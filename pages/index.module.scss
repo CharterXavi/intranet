@@ -2,6 +2,7 @@
 
 .dashboard {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -21,8 +22,6 @@
 
             .left {
                 width: 75%;
-                height: 1000px;
-                border: 1px dashed $clinic-blue;
                 border-radius: 10px;
                 margin: 0 16px 0 0;
             }

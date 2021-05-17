@@ -1,6 +1,7 @@
 import CompanyResources from '../components/sections/company-resources'
 import EmployeeSpotlight from '../components/sections/employee-spotlight'
 import Head from 'next/head'
+import HomeNews from '../components/sections/home-news'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
@@ -23,6 +24,7 @@ export default function Home() {
 
           <div className={styles.twoColumn}>
             <div className={styles.left}>
+              <HomeNews />
               <CompanyResources />
             </div>
             <div className={styles.right}>
