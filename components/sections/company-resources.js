@@ -15,7 +15,7 @@ const CompanyResources = () => {
             icon: <BookIcon className={styles.icon} />
         },
         {
-            title: 'Microsoft Office 365',
+            title: 'Office 365',
             description: 'Log in to your Microsoft Office account to access email (Outlook) and other Microsoft office apps',
             link: 'https://www.office.com/',
             icon: <SocialIcon className={styles.icon} />
@@ -33,7 +33,7 @@ const CompanyResources = () => {
             icon: <CheckboxIcon className={styles.icon} />
         },
         {
-            title: 'Education Orientation Resources',
+            title: 'Orientation Resources',
             description: 'Quickly access training materials for orientation and training',
             link: 'https://charterhcg.sharepoint.com/sites/Training',
             icon: <InternIcon className={styles.icon} />
