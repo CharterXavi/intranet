@@ -24,8 +24,12 @@ import styles from './post-link.module.scss'
         // </Link>
 
 const PostLink = (props) => {
+
+    const { title, date, image, slug, category } = props;
+    console.log(image.fields.file.url);
+
     return (
-        <Link href='/'>
+        <Link href={`/${slug}`}>
             <motion.a className={styles.PostLink}
                             initial={{ opacity: 0 }}
                             animate={{  
@@ -39,16 +43,16 @@ const PostLink = (props) => {
                 <div className={styles.wrapper}>
                     <div className={styles.categories}>
                         <p className={styles.category}>
-                            Health
+                            {category}
                         </p>
                     </div>
                     <div className={styles.content}>
-                        Title of an Article
+                        {title}
                         <br />
-                        1/1/2021
+                        {date}
                     </div>
                     <div className={styles.overlay}></div>
-                    <Image src={`/${props.image}`} alt="Blog Post" layout='fill' className={styles.image} />
+                    <img src={`https:${image.fields.file.url}`} alt="Blog Post" className={styles.image} />
                 </div>
             </motion.a>
         </Link>

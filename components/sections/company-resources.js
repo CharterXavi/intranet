@@ -10,13 +10,13 @@ const CompanyResources = () => {
     const [resources, setResources] = useState([
         {
             title: 'Charter Learning Center',
-            description: 'Manage your licenses, certifications, courses, and assignments in Relias',
+            description: 'Manage your courses, assignments, and more in Relias',
             link: 'https://charterhcg.training.reliaslearning.com/',
             icon: <BookIcon className={styles.icon} />
         },
         {
             title: 'Office 365',
-            description: 'Log in to your Microsoft Office account to access email (Outlook) and other Microsoft office apps',
+            description: 'Log in to your Microsoft Office account to access email and other apps',
             link: 'https://www.office.com/',
             icon: <SocialIcon className={styles.icon} />
         },
