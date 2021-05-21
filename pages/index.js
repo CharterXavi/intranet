@@ -5,6 +5,7 @@ import CompanyResources from '../components/sections/company-resources'
 import EmployeeSpotlight from '../components/sections/employee-spotlight'
 import Head from 'next/head'
 import HomeNews from '../components/sections/home-news'
+import PostLinkPlaceholder from '../components/placeholders/post-link-placeholder'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
@@ -57,9 +58,13 @@ export default function Home() {
           <div className={styles.twoColumn}>
             <div className={styles.left}>
             {
-              posts.length > 0
-              ? <HomeNews posts={posts} />
-              : null
+              posts.length > 0 ? 
+                <HomeNews posts={posts} />
+                : 
+                <div style={{display: 'flex'}}>
+                  <PostLinkPlaceholder />
+                  <PostLinkPlaceholder />
+                </div>
             }
               <CompanyResources />
             </div>
