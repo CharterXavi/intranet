@@ -10,17 +10,22 @@ import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
 import styles from './index.module.scss'
 
-const client = require('contentful').createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+const intranetClient = require('contentful').createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID_INTRANET,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN_INTRANET,
+})
+const websiteClient = require('contentful').createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID_WEBSITE,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN_WEBSITE,
 })
 
 
 export default function Home() {
 
   const fetchEntries = async () => {
-    const entries = await client.getEntries()
-    if (entries.items) return entries.items
+    const intranetEntries = await intranetClient.getEntries()
+    const webEntries = await websiteClient.getEntries()
+    if (intranetEntries.items && webEntries.items) return [intranetEntries.items[0], webEntries.items[0]]
     console.log(`Error getting Entries for ${contentType.name}.`)
   }
 
@@ -28,8 +33,8 @@ export default function Home() {
 
   useEffect(() => {
     async function getPosts() {
-      const allPosts = await fetchEntries()
-      setPosts([...allPosts])
+      const recentPosts = await fetchEntries()
+      setPosts([...recentPosts])
     }
     getPosts()
   }, [])
