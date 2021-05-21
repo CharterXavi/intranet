@@ -1,4 +1,4 @@
-import Placeholder from '../cards/placeholder'
+import InlinePlaceholder from '../placeholders/inline-placeholder'
 import Title from '../banners/title'
 import {motion} from 'framer-motion'
 import styles from './employee-spotlight.module.scss'
@@ -19,13 +19,13 @@ const EmployeeSpotlight = () => {
                     duration: 0.4
                 }}
             >
-                <Placeholder />
-                <Placeholder />
-                <Placeholder />
-                <Placeholder />
-                <Placeholder />
-                <Placeholder />
-                <Placeholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
+                <InlinePlaceholder />
             </motion.div>
         </div>
     )
