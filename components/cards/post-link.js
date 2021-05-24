@@ -7,7 +7,7 @@ const PostLink = (props) => {
     const { title, date, image, slug, category } = props;
 
     return (
-        <Link href={`/${slug}`}>
+        <Link href={`/blog/${slug}`}>
             <motion.a className={styles.PostLink}
             initial={{ opacity: 0 }}
             animate={{  
@@ -27,10 +27,15 @@ const PostLink = (props) => {
                     <div className={styles.content}>
                         {title}
                         <br />
-                        {date}
+                        {Date(date).toString()}
                     </div>
                     <div className={styles.overlay}></div>
-                    <img src={`https:${image.fields.file.url}`} alt="Blog Post" className={styles.image} />
+                    {
+                        image ? 
+                        <img src={`https:${image.fields.file.url}`} alt="Blog Post" className={styles.image} />
+                        :
+                        null
+                    }
                 </div>
             </motion.a>
         </Link>

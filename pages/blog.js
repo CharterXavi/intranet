@@ -1,11 +1,12 @@
 import Announcements from '../components/sections/announcements'
 import Head from 'next/head'
+import PostList from '../components/sections/post-list'
 import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
 import styles from './blog.module.scss'
 
-export default function BlogPage() {
+export default function BlogPage({ posts }) {
   return (
     <div>
       <Head>
@@ -22,7 +23,7 @@ export default function BlogPage() {
 
           <div className={styles.twoColumn}>
             <div className={styles.left}>
-              
+              <PostList posts={posts} />
             </div>
             <div className={styles.right}>
               <Announcements />
@@ -32,4 +33,23 @@ export default function BlogPage() {
       </main>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  // Create an instance of the Contentful JavaScript SDK
+  const client = require("contentful").createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID_INTRANET,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN_INTRANET,
+  })
+
+  // Fetch all entries of content_type `blogPost`
+  const posts = await client
+    .getEntries({ content_type: "blogPost" })
+    .then((response) => response.items)
+
+  return {
+    props: {
+      posts,
+    },
+  }
 }
