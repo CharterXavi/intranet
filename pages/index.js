@@ -24,8 +24,12 @@ const websiteClient = require('contentful').createClient({
 export default function Home() {
 
   const fetchEntries = async () => {
-    const intranetEntries = await intranetClient.getEntries()
-    const webEntries = await websiteClient.getEntries()
+    const intranetEntries = await intranetClient.getEntries({
+      content_type: 'blogPost'
+    })
+    const webEntries = await websiteClient.getEntries({
+      content_type: 'blogPost'
+    })
     if (intranetEntries.items && webEntries.items) return [intranetEntries.items[0], webEntries.items[0]]
     console.log(`Error getting Entries for ${contentType.name}.`)
   }
