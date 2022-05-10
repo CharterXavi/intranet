@@ -10,9 +10,15 @@ const WelcomeBanner = (props) => {
         >
             <h1>{props.title}</h1>
             <div className={styles.right}>
-                <div className={styles.block}></div>
-                <div className={styles.block}></div>
-                <div className={styles.block}></div>
+                <a href='https://charterhcg.training.reliaslearning.com/'>
+                    <div className={styles.block}>Charter Learning Center</div>
+                </a>
+                <a href='https://www.office.com/'>
+                    <div className={styles.block}>Office 365</div>
+                </a>
+                <a href='https://workforcenow.adp.com/theme/index.html'>
+                    <div className={styles.block}>I.T. Helpdesk</div>
+                </a>
             </div>
         </motion.div>
     )

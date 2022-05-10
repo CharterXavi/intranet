@@ -29,7 +29,27 @@
             width: 180px;
             margin: 0 8px;
             background: rgba(250,250,250,0.5);
+            color:black;
+            font-size: 20px;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: 0.15s ease all;
+
+        &:hover {
+            background: $primary-accent;
+            color: white;
         }
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.22);
+        }
+        }
+        
+        
     }
 }
