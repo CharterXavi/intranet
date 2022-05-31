@@ -58,7 +58,15 @@ export default function BlogPage({ posts }) {
               }
             </div>
             <div className={styles.right}>
-              <Announcements />
+            {
+                posts.length > 0 ?
+                  <Announcements posts={posts}/>
+                  :
+                  <div>
+                    <Announcement />
+                  </div>
+
+            }
             </div>
           </div> 
         </div>

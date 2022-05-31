@@ -1,4 +1,3 @@
-import PostLink from '../cards/post-link'
 import Title from '../banners/title'
 import WebPostLink from '../cards/web-post-link'
 import styles from './home-news.module.scss'
@@ -12,7 +11,7 @@ const HomeNews = (props) => {
         <div className={styles.HomeNews}>
             <Title content='Recent news' />
             <div className={styles.container}>
-                <PostLink 
+                <WebPostLink 
                     title={posts[0].fields.title}
                     date={posts[0].fields.date}
                     image={posts[0].fields.image}
@@ -27,7 +26,7 @@ const HomeNews = (props) => {
                     slug={posts[1].fields.slug}
                     tags={posts[1].fields.tags}
                     category={posts[1].fields.category}
-                />
+               />
             </div>
         </div>
     )

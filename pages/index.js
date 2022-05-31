@@ -10,6 +10,7 @@ import Sidebar from '../components/navbars/sidebar'
 import Topbar from '../components/navbars/topbar'
 import WelcomeBanner from '../components/banners/welcome-banner'
 import styles from './index.module.scss'
+import Announcement from '../components/placeholders/announcement'
 
 const intranetClient = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID_INTRANET,
@@ -30,7 +31,7 @@ export default function Home() {
     const webEntries = await websiteClient.getEntries({
       content_type: 'blogPost'
     })
-    if (intranetEntries.items && webEntries.items) return [intranetEntries.items[0], webEntries.items[0]]
+    if (intranetEntries.items && webEntries.items) return intranetEntries.items, webEntries.items
     console.log(`Error getting Entries for ${contentType.name}.`)
   }
 
@@ -73,8 +74,18 @@ export default function Home() {
               <CompanyResources />
             </div>
             <div className={styles.right}>
-              <EmployeeSpotlight />
-              <Announcements />
+              <EmployeeSpotlight  />
+              {
+                posts.length > 0 ?
+                  <Announcements posts={posts}/>
+                  :
+                  <div>
+                    <Announcement />
+                  </div>
+
+              }
+              
+  
             </div>
           </div> 
         </div>

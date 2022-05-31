@@ -1,9 +1,15 @@
-import InlinePlaceholder from '../placeholders/inline-placeholder'
 import Title from '../banners/title'
 import {motion} from 'framer-motion'
 import styles from './announcements.module.scss'
+import Announcment from '../placeholders/announcement'
 
-const Announcements = () => {
+
+
+const Announcements = (props) => {
+    console.log(props.posts)
+
+    const {posts} = props;
+
     return (
         <div className={styles.Announcements}>
             <Title content='Announcements' />
@@ -19,14 +25,35 @@ const Announcements = () => {
                 duration: 0.4
             }}
             >
-                <InlinePlaceholder />
-                <InlinePlaceholder />
-                <InlinePlaceholder />
-                <InlinePlaceholder />
-                <InlinePlaceholder />
+                <Announcment
+                    title={posts[0].fields.title}
+                />
+                <Announcment
+                    title={posts[1].fields.title}
+                />
             </motion.div>
         </div>
     )
+    
 }
-
 export default Announcements
+
+export async function getStaticProps() {
+    // Create an instance of the Contentful JavaScript SDK
+    const client = require("contentful").createClient({
+      space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID_INTRANET,
+      accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN_INTRANET,
+    })
+  
+    // Fetch all entries of content_type `blogPost`
+    const posts = await client
+      .getEntries({ content_type: "blogPost" })
+      .then((response) => response.items)
+  
+    return {
+      props: {
+        posts,
+      },
+    }
+  }
+
